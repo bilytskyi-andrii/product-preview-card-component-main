@@ -29,3 +29,121 @@ svg {
     display: block;
     max-width: 100%;
 }
+
+body {
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-regular);
+    color: var(--clr-neutral-400);
+    font-size: 14px;
+    background: var(--clr-secondary-200);
+}
+
+.product-card-component {
+    margin: 1rem;
+    border-radius: 1rem;
+    background: var(--clr-neutral-100);
+}
+
+img {
+    border-radius: 1rem 1rem 0 0;
+}
+
+.image-mobile {
+    display: block;
+}
+
+.image-desktop {
+    display: none;
+}
+
+.info-section {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.category-title {
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+
+.product-title {
+    font-family: var(--ff-secondary);
+    color: var(--clr-neutral-900);
+    font-weight: var(--fw-bold);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.description {
+    line-height: 2;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+span[data-item-type="new"] {
+    font-family: var(--ff-secondary);
+    color: var(--clr-primary-400);
+    font-weight: var(--fw-bold);
+    font-size: 2.5rem;
+}
+
+span[data-item-type="old"] {
+    text-decoration-line: line-through;
+}
+
+button {
+    background: var(--clr-primary-400);
+    color: var(--clr-neutral-100);
+    font-weight: var(--fw-bold);
+    border: none;
+    border-radius: .5rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+svg {
+    fill: var(--clr-neutral-100);
+}
+
+@media (min-width: 600px) {
+    body {
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+
+    .product-card-component {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 46rem;
+    }
+
+    img {
+        border-radius: 1rem 0 0 1rem;
+    }
+
+    .image-mobile {
+        display: none;
+    }
+
+    .image-desktop {
+        display: block;
+        min-height: 100%;
+    }
+
+    .product-title {
+        font-size: 2.5rem;
+        max-width: 15rem;
+    }
+}
